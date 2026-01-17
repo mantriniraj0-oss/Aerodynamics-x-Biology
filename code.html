@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Real Life Applications - Aerodynamics × Biology</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;700;900&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "primary-light": "#e0f0ff",
+                        "background-light": "#f0f7ff", /* Customized for 'cozy blue' request */
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "Noto Sans", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem", 
+                        "lg": "1rem", 
+                        "xl": "1.5rem", 
+                        "2xl": "2rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        "soft-blue": "0 10px 40px -10px rgba(19, 127, 236, 0.15)",
+                        "card": "0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)"
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scrollbar for better presentation feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f0f7ff; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1; 
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8; 
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white transition-colors duration-200">
+<div class="relative flex min-h-screen flex-col overflow-x-hidden">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 w-full bg-white/80 dark:bg-[#111418]/90 backdrop-blur-md border-b border-[#e5e7eb] dark:border-[#1f2937]">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-6 lg:px-40 flex flex-1 justify-center py-4">
+<div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
+<div class="flex items-center justify-between whitespace-nowrap">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-primary dark:text-primary-light cursor-pointer group">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white shadow-lg shadow-primary/30 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">flight</span>
+</div>
+<h2 class="text-[#111418] dark:text-white text-xl font-bold leading-tight tracking-tight">Aerodynamics × Biology</h2>
+</div>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-[#617589] dark:text-slate-400 text-sm font-medium hover:text-primary dark:hover:text-primary-light transition-colors" href="#">Home</a>
+<a class="text-[#617589] dark:text-slate-400 text-sm font-medium hover:text-primary dark:hover:text-primary-light transition-colors" href="#">Concepts</a>
+<a class="text-[#111418] dark:text-white text-sm font-bold border-b-2 border-primary pb-0.5" href="#">Applications</a>
+<a class="text-[#617589] dark:text-slate-400 text-sm font-medium hover:text-primary dark:hover:text-primary-light transition-colors" href="#">About Us</a>
+</div>
+</div>
+<div class="flex items-center justify-end gap-4">
+<div class="hidden sm:flex relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-[#617589]">search</span>
+<input class="h-10 rounded-full bg-slate-100 dark:bg-slate-800 border-none pl-10 pr-4 text-sm focus:ring-2 focus:ring-primary w-64" placeholder="Search topics..."/>
+</div>
+<button class="hidden md:flex items-center justify-center h-10 px-5 rounded-full bg-primary hover:bg-blue-600 text-white text-sm font-bold shadow-lg shadow-blue-500/30 transition-all hover:-translate-y-0.5">
+<span class="material-symbols-outlined text-[18px] mr-2">slideshow</span>
+                                    Present Mode
+                                </button>
+<div class="size-10 rounded-full border-2 border-white shadow-md bg-cover bg-center cursor-pointer hover:ring-2 ring-primary transition-all" data-alt="User profile avatar showing a smiling person" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB4nofM6zvGHUkWHoMPUr3wWQMjY152oWOwp9oyRRBUpoLDrZ5CJhlUdEPUBciE08qIubGaQyxQkuAMO-35fuBzpe9ywRGlH4rRzN1DdrjCr9LQ6vTlJfHby61_I6_kovniqxoAxsNLdZqJaEwOT_mqoEdrVgLWx4zS_c8NPo24lRnDecxH-UZjvwowb8OjFbo-TFmAYYQxhdUqV49H08X-4WjgocZg5nRMr6qY5hbIzDUgmRFG3PtA-9b9HFBdq32m6vwrz-CmeZQ');"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-grow layout-container flex flex-col items-center">
+<div class="w-full max-w-[1200px] px-6 lg:px-40 py-8 flex flex-col gap-8">
+<!-- Breadcrumbs -->
+<nav class="flex text-sm font-medium text-[#617589] dark:text-slate-400">
+<ol class="flex items-center space-x-2">
+<li><a class="hover:text-primary transition-colors" href="#">Home</a></li>
+<li><span class="material-symbols-outlined text-xs align-middle">chevron_right</span></li>
+<li><span class="text-primary dark:text-primary-light font-semibold">Real Life Applications</span></li>
+</ol>
+</nav>
+<!-- Page Heading & Intro -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-2xl space-y-3">
+<h1 class="text-4xl md:text-5xl font-black tracking-tight text-[#111418] dark:text-white leading-[1.1]">
+                            Real Life Applications
+                        </h1>
+<p class="text-lg text-[#617589] dark:text-slate-300 leading-relaxed font-light">
+                            Exploring the intersection of Aerodynamics and Biological Evolution. Discover how nature's designs are revolutionizing modern engineering.
+                        </p>
+</div>
+<!-- Quick Stats/Info (Optional decorative element) -->
+<div class="flex gap-4">
+<div class="px-4 py-2 bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-100 dark:border-slate-700">
+<span class="block text-xs text-slate-500 font-bold uppercase tracking-wider">Examples</span>
+<span class="text-xl font-bold text-primary">24</span>
+</div>
+<div class="px-4 py-2 bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-100 dark:border-slate-700">
+<span class="block text-xs text-slate-500 font-bold uppercase tracking-wider">Updated</span>
+<span class="text-xl font-bold text-slate-700 dark:text-slate-200">Today</span>
+</div>
+</div>
+</div>
+<!-- Grid Content -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<article class="group bg-white dark:bg-[#1e293b] rounded-2xl overflow-hidden shadow-card hover:shadow-soft-blue transition-all duration-300 hover:-translate-y-1 border border-slate-100 dark:border-slate-700 flex flex-col h-full">
+<div class="relative w-full aspect-video overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Close up of a bird wing showing intricate feather patterns" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuChM2jj7V6y7Qh7K2r44BAd1gpsiW96tCt7NDsCCR12tbaZGNmE4W80E2F47E3l2zaVAb1kZLXWQH04ekij-JHNJIYn83qv7KBa0Fwzw_ph0OlfCP_XPOZg7VecaH7ov1OqrWoSn5SqfovYEG-l8bXN7PBLXKjBQ6XX-eCwoNuTjyXXWIYbZIvU13E-q9wQMpPSWnzelBS61PMcYTj0uBZUmHEX3fOBY9agcIk8iaaOiLFXzaBVPlU5KXq1bvWvd1kLvzdJCRj4HG8');"></div>
+<div class="absolute top-3 right-3 bg-white/90 dark:bg-black/70 backdrop-blur-sm p-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer text-primary">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex items-center gap-2 mb-3">
+<span class="px-2 py-1 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300 text-xs font-bold uppercase rounded-md">Avian</span>
+<span class="text-slate-400 text-xs font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">visibility</span> 1.2k
+                                </span>
+</div>
+<h3 class="text-xl font-bold text-[#111418] dark:text-white mb-2 group-hover:text-primary transition-colors">Bird Wing Anatomy</h3>
+<p class="text-[#617589] dark:text-slate-400 text-sm leading-relaxed mb-6 flex-1">
+                                How the alula feather acts as a slat to prevent stalling during slow flight, allowing for precise landings and maneuvers.
+                            </p>
+<div class="pt-4 border-t border-slate-100 dark:border-slate-700 flex justify-between items-center">
+<button class="text-sm font-semibold text-primary hover:text-blue-700 dark:hover:text-blue-300 flex items-center gap-1 group/btn">
+                                    Learn more 
+                                    <span class="material-symbols-outlined text-[16px] transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+<span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer text-[20px]">bookmark</span>
+</div>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="group bg-white dark:bg-[#1e293b] rounded-2xl overflow-hidden shadow-card hover:shadow-soft-blue transition-all duration-300 hover:-translate-y-1 border border-slate-100 dark:border-slate-700 flex flex-col h-full">
+<div class="relative w-full aspect-video overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Futuristic drone flying with multiple propellers" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDAU-MiLo-Ii_Y8UFBdtSh0WZIItgupXlznDxy1zymjAgY0OO0Vo-Jo4olz-B6RpJdlYE4gPfdeQrL8Kz3_vTy8KyF3jZ12f1zIfLfWIZnXWTidE-efwjqnhq0-ibojg0zogAZf7l-arkME1qfJ3-oVuQx9UII0H9kE0-f5yL8VtiqQU_Mu2dg2BYbThPYJHJtaPxA4oTsHFDRalrErwc2ITf8Rjf3AOhxSQHji9AQBLv8w_7UCjHcFtEWBeSIpWq1qLUBDXVZvS0Q');"></div>
+<div class="absolute top-3 right-3 bg-white/90 dark:bg-black/70 backdrop-blur-sm p-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer text-primary">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex items-center gap-2 mb-3">
+<span class="px-2 py-1 bg-purple-50 dark:bg-purple-900/30 text-purple-600 dark:text-purple-300 text-xs font-bold uppercase rounded-md">Robotics</span>
+</div>
+<h3 class="text-xl font-bold text-[#111418] dark:text-white mb-2 group-hover:text-primary transition-colors">Biomimetic Drones</h3>
+<p class="text-[#617589] dark:text-slate-400 text-sm leading-relaxed mb-6 flex-1">
+                                Engineering quiet propulsion systems inspired by the serrated feathers of owls to reduce noise pollution in urban environments.
+                            </p>
+<div class="pt-4 border-t border-slate-100 dark:border-slate-700 flex justify-between items-center">
+<button class="text-sm font-semibold text-primary hover:text-blue-700 dark:hover:text-blue-300 flex items-center gap-1 group/btn">
+                                    Learn more 
+                                    <span class="material-symbols-outlined text-[16px] transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+<span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer text-[20px]">bookmark</span>
+</div>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="group bg-white dark:bg-[#1e293b] rounded-2xl overflow-hidden shadow-card hover:shadow-soft-blue transition-all duration-300 hover:-translate-y-1 border border-slate-100 dark:border-slate-700 flex flex-col h-full">
+<div class="relative w-full aspect-video overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Nose of a bullet train, streamlined blue design" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDtyY4uo5XFbpey2AA_OHkhLHJu7ZHhz7cCMyz0oh4WEBbaBm9ZlzH1vwjJIhxHmRaglUz-tZHALd_E3hWMuQi_yx9F4d0lX2JG2wQZ_QxnFeOs6dTG1jqFI6IE8X53QuZlTAmJx8Zmy-BXpfdshl4pefjIJL7o20Eziq63XLnS-HvWra3Z2C0GD_wCF1NVUKFNx0vCPS0Q7M0eYKI1-D74MHRUKKxmkPkSaFxiE5ze8_i37ou7annD9H2KUAp4ozH1hoK9JAv_leE');"></div>
+<div class="absolute top-3 right-3 bg-white/90 dark:bg-black/70 backdrop-blur-sm p-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer text-primary">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex items-center gap-2 mb-3">
+<span class="px-2 py-1 bg-teal-50 dark:bg-teal-900/30 text-teal-600 dark:text-teal-300 text-xs font-bold uppercase rounded-md">Transport</span>
+</div>
+<h3 class="text-xl font-bold text-[#111418] dark:text-white mb-2 group-hover:text-primary transition-colors">Kingfisher Streamlining</h3>
+<p class="text-[#617589] dark:text-slate-400 text-sm leading-relaxed mb-6 flex-1">
+                                Reducing sonic boom in tunnel entry for high-speed trains by mimicking the Kingfisher's beak shape for smoother penetration.
+                            </p>
+<div class="pt-4 border-t border-slate-100 dark:border-slate-700 flex justify-between items-center">
+<button class="text-sm font-semibold text-primary hover:text-blue-700 dark:hover:text-blue-300 flex items-center gap-1 group/btn">
+                                    Learn more 
+                                    <span class="material-symbols-outlined text-[16px] transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+<span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer text-[20px]">bookmark</span>
+</div>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="group bg-white dark:bg-[#1e293b] rounded-2xl overflow-hidden shadow-card hover:shadow-soft-blue transition-all duration-300 hover:-translate-y-1 border border-slate-100 dark:border-slate-700 flex flex-col h-full">
+<div class="relative w-full aspect-video overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Shark skin texture close up showing scales" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCZgdS-6LOLITyuTnJ8foyYJ2y9tLRvdFk6cbuz32Xsd5P4D5XW3vMg6OvW76GuWZuF3Knh5jraavtaoFtGiLva6KMz4GScS3HxGND_ZhUjkO5WvUorGci1Gc0hzONokMTTKijR2myffSNdwx_dJNieZWtoYSHw_FzHFbDo7SqeGYBud_QF0yEXCF3XMrcanX1bh0LELUQ6Epv2BYM5EXZ70-tQ2dLMsM5Bp3OOqGyZb7Vbs-e0HdD6CArqmtx7GwEdVjeYefJYU7w');"></div>
+<div class="absolute top-3 right-3 bg-white/90 dark:bg-black/70 backdrop-blur-sm p-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer text-primary">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex items-center gap-2 mb-3">
+<span class="px-2 py-1 bg-cyan-50 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-300 text-xs font-bold uppercase rounded-md">Marine</span>
+</div>
+<h3 class="text-xl font-bold text-[#111418] dark:text-white mb-2 group-hover:text-primary transition-colors">Shark Skin Effect</h3>
+<p class="text-[#617589] dark:text-slate-400 text-sm leading-relaxed mb-6 flex-1">
+                                Using riblet structures inspired by shark skin to reduce drag on aircraft fuselages and ship hulls.
+                            </p>
+<div class="pt-4 border-t border-slate-100 dark:border-slate-700 flex justify-between items-center">
+<button class="text-sm font-semibold text-primary hover:text-blue-700 dark:hover:text-blue-300 flex items-center gap-1 group/btn">
+                                    Learn more 
+                                    <span class="material-symbols-outlined text-[16px] transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+<span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer text-[20px]">bookmark</span>
+</div>
+</div>
+</article>
+<!-- Card 5 -->
+<article class="group bg-white dark:bg-[#1e293b] rounded-2xl overflow-hidden shadow-card hover:shadow-soft-blue transition-all duration-300 hover:-translate-y-1 border border-slate-100 dark:border-slate-700 flex flex-col h-full">
+<div class="relative w-full aspect-video overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Seed dispersal of a maple seed spinning in air" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDSm7XpWBfTVzYUw_G4pNe3VpnAiETV7oCLcZ65wlV6KAEOmZpiKM5Ibyg4EUqVEnXbwqmYJIKJPVRmwrQdoNRD9zEenFEdgUek16nGlf5biYhy6oGupScJoY_wwQdFuN-AZfPbYCRm9MZazAS5CNHx9GtEbbuq1gLjeU-CwsMeEnbj8888UrdRs27A6algUSqLVT-c5OUVZOOQ2ndEO5aqyUnw9jbGDEvhGCDJul9bfATqXjaQAOcCPuWNw_9hZo21a8cMzExzpek');"></div>
+<div class="absolute top-3 right-3 bg-white/90 dark:bg-black/70 backdrop-blur-sm p-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer text-primary">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex items-center gap-2 mb-3">
+<span class="px-2 py-1 bg-green-50 dark:bg-green-900/30 text-green-600 dark:text-green-300 text-xs font-bold uppercase rounded-md">Botany</span>
+</div>
+<h3 class="text-xl font-bold text-[#111418] dark:text-white mb-2 group-hover:text-primary transition-colors">Autorotation Seeds</h3>
+<p class="text-[#617589] dark:text-slate-400 text-sm leading-relaxed mb-6 flex-1">
+                                Analysis of maple seeds (samaras) leading to improved single-blade rotor designs for micro-air vehicles.
+                            </p>
+<div class="pt-4 border-t border-slate-100 dark:border-slate-700 flex justify-between items-center">
+<button class="text-sm font-semibold text-primary hover:text-blue-700 dark:hover:text-blue-300 flex items-center gap-1 group/btn">
+                                    Learn more 
+                                    <span class="material-symbols-outlined text-[16px] transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+<span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer text-[20px]">bookmark</span>
+</div>
+</div>
+</article>
+<!-- Add New Card (Empty State) -->
+<button class="group relative rounded-2xl border-2 border-dashed border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:border-primary dark:hover:border-primary transition-all duration-300 flex flex-col items-center justify-center text-center p-8 h-full min-h-[300px]">
+<div class="size-16 rounded-full bg-white dark:bg-slate-700 shadow-sm flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">add</span>
+</div>
+<h3 class="text-lg font-bold text-[#111418] dark:text-white mb-2">Add Example</h3>
+<p class="text-slate-500 text-sm max-w-[200px]">Create a new case study or upload an image to analyze.</p>
+</button>
+</div>
+</div>
+<!-- Floating Action Button for Mobile/Quick access -->
+<div class="fixed bottom-8 right-8 z-40">
+<button class="flex items-center justify-center size-14 rounded-full bg-primary hover:bg-blue-600 text-white shadow-lg shadow-blue-500/40 transition-all hover:-translate-y-1 active:scale-95">
+<span class="material-symbols-outlined text-[28px]">add</span>
+</button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-[#111418] border-t border-slate-200 dark:border-slate-800 py-8 mt-12">
+<div class="layout-container flex justify-center px-6 lg:px-40">
+<div class="w-full max-w-[1200px] flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-slate-500 text-sm">© 2023 Aerodynamics × Biology. Academic Use Only.</p>
+<div class="flex gap-6">
+<a class="text-slate-500 hover:text-primary text-sm transition-colors" href="#">Privacy</a>
+<a class="text-slate-500 hover:text-primary text-sm transition-colors" href="#">Resources</a>
+<a class="text-slate-500 hover:text-primary text-sm transition-colors" href="#">Contact</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>
